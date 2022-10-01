@@ -3,7 +3,7 @@
 ## ALL CREATED WITH HTML5 AND CSS
 
 Including:
-- Squeeze Page
+- [Squeeze Page](./squeeze_page/)
 - Long-form Landing Page
 - Click-Through Landing Page
 - Product Details Page
