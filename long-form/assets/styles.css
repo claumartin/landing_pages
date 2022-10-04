@@ -1,0 +1,189 @@
+/* ---- GENERIC ------------------------------------------------------------ */
+.generic-button {
+  background-color: #9A0101;
+  border-radius: 30px;
+  text-align: center;
+  border: none;
+  padding: 10px 20px;
+  font-size: 20px;
+  font-weight: 600;
+  color: #E9ECEF;
+  width: 200px;
+  font-family: 'Krona One', sans-serif;
+  cursor: pointer;
+}
+.generic-button:active {
+  font-weight: 600;
+  filter: brightness(1.05);
+}
+.flex-row-centered {
+  display: flex;
+}
+.flex-column {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+body {
+  margin: 0;
+  font-family: 'Mingzat', sans-serif;
+  color: #CED4DA;
+}
+/* ---- HEADER ------------------------------------------------------------- */
+header {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px;
+  align-items: center;
+  background: #040101;
+}
+.header-logo, .header-logo > * {
+  cursor: pointer;
+}
+.header-logo:target,
+.header-logo:hover, 
+.header-logo img:target,
+.header-logo img:hover, 
+.header-logo > *:target,
+.header-logo > *:hover {
+  filter: brightness(1.05);
+}
+.header-logo img {
+  width: 140px;
+}
+.header-nav-bar {
+  flex-grow: 2;
+  display: flex;
+  justify-content: end;
+  list-style: none;
+  color: #E9ECEF;
+}
+.desktop-header-nav-bar {
+  display: none;
+  justify-content: end;
+  align-items: center;
+  margin: 0;
+}
+@media only screen and (min-width: 769px) {
+  .mobile-header-nav-bar {
+    display: none;
+  }
+  .desktop-header-nav-bar {
+    display: flex;
+  }
+}
+.header-dropdown_menu-button {
+  border: none;
+  background: none;
+  width: 30px;
+  box-sizing: content-box;
+  cursor: pointer;
+}
+.header-dropdown_menu-button:hover, 
+.header-dropdown_menu-button:target {
+  filter: brightness(1.05);
+}
+.header-dropdown_menu-button:active, 
+.header-dropdown_menu-button:hover,
+.header-dropdown_menu-button > *:active, 
+.header-dropdown_menu-button > *:hover {
+  filter: brightness(1.5);
+}
+.header-dropdown_menu-button img {
+  width: inherit;
+}
+.header-dropdown_menu-content {
+  display: none;
+  position: absolute;
+  z-index: 1;
+  flex-direction: column;
+  list-style: none;
+  align-items: end;
+  background-color: #212529;
+  margin-top: 60px;
+  right: 0;
+  padding: 0;
+  width: max-content;
+}
+.header-dropdown_menu-content.active {
+  display: flex;
+}
+.header-dropdown_menu-content-item {
+  width: 100%;
+}
+.desktop-header-nav-bar 
+.header-nav-bar-item:last-of-type {
+  padding: 10px;
+  flex-grow: 2;
+  margin-left: 20px;
+  max-width: 200px;
+}
+.desktop-header-nav-bar .header-nav-bar-item:last-of-type form {
+  display: flex;
+  width: 100%;
+}
+.mobile-header-nav-bar .header-nav-bar-item:last-of-type button {
+  margin: 10px;
+  width: 90%;
+}
+.header-nav-bar-item a {
+  text-decoration: none;
+  color: inherit;
+  padding: 10px 20px;
+}
+.header-nav-bar-item a:active, 
+.header-nav-bar-item a:hover {
+  filter: brightness(1.05);
+  text-decoration: underline;
+}
+
+/* ---- SECTION 1 ---------------------------------------------------------- */
+.join_us_section {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 30px;
+  background-color: #343A40;
+}
+@media only screen and (min-width: 769px) {
+  .join_us_section {
+    display: flex;
+    flex-direction: row;
+    padding: 30px;
+    background-color: #343A40;
+    text-align: center;
+  }
+}
+.join_us_section img {
+  width: 100px;
+}
+.join_us_section-center_content {
+  margin: 20px;
+}
+.join_us_section-center_content-tittle {
+  font-family: 'Krona One', sans-serif;
+  margin: 0;
+  color: #E9ECEF;
+}
+.join_us_section-center_content-subtitle {
+  margin: 0;
+}
+.join_us_section-center_content-resume {
+  margin: 0;
+}
+.join_us_section-center_content-resume:last-of-type {
+  margin-bottom: 20px;
+}
+.join_us_section-center_content a {
+  color: #E9ECEF;
+  font-weight: 600;
+  text-decoration: none;
+}
+.join_us_section-center_content a:active,
+.join_us_section-center_content a:hover {
+  text-decoration: underline;
+}
