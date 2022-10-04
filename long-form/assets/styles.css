@@ -1,5 +1,8 @@
-/* ---- GENERIC ------------------------------------------------------------ */
-.generic-button {
+/* =============================================================================
+   GENERIC STYLES 
+   ========================================================================== */
+/* ---- Generic button ------------------------------------------------------ */
+.generic_button {
   background-color: #9A0101;
   border-radius: 30px;
   text-align: center;
@@ -12,26 +15,26 @@
   font-family: 'Krona One', sans-serif;
   cursor: pointer;
 }
-.generic-button:active {
+.generic_button:active, 
+.generic_button:hover {
   font-weight: 600;
   filter: brightness(1.05);
+  text-decoration: underline;
 }
-.flex-row-centered {
-  display: flex;
-}
+/* ---- Classes to group repeated properties -------------------------------- */
 .flex-column {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
 }
-
+/* ---- Body ---------------------------------------------------------------- */
 body {
   margin: 0;
   font-family: 'Mingzat', sans-serif;
   color: #CED4DA;
 }
-/* ---- HEADER ------------------------------------------------------------- */
+/* ---- Header with navigation ---------------------------------------------- */
 header {
   display: flex;
   justify-content: space-between;
@@ -39,6 +42,7 @@ header {
   align-items: center;
   background: #040101;
 }
+/* ---- Header logo to home ------------------------------------------------- */
 .header-logo, .header-logo > * {
   cursor: pointer;
 }
@@ -53,27 +57,30 @@ header {
 .header-logo img {
   width: 140px;
 }
-.header-nav-bar {
+/* ---- Header dropdown menu for mobile and navigation bar for desktop ------ */
+.header-dropdown_menu,
+.header-nav_bar {
   flex-grow: 2;
   display: flex;
   justify-content: end;
   list-style: none;
   color: #E9ECEF;
 }
-.desktop-header-nav-bar {
+.header-nav_bar {
   display: none;
   justify-content: end;
   align-items: center;
   margin: 0;
 }
 @media only screen and (min-width: 769px) {
-  .mobile-header-nav-bar {
+  .header-dropdown_menu {
     display: none;
   }
-  .desktop-header-nav-bar {
+  .header-nav_bar {
     display: flex;
   }
 }
+/* ---- Dropdoen menu button ------------------------------------------------ */
 .header-dropdown_menu-button {
   border: none;
   background: none;
@@ -94,13 +101,13 @@ header {
 .header-dropdown_menu-button img {
   width: inherit;
 }
+/* ---- Dropdoen menu content and navigation items -------------------------- */
 .header-dropdown_menu-content {
   display: none;
   position: absolute;
   z-index: 1;
   flex-direction: column;
   list-style: none;
-  align-items: end;
   background-color: #212529;
   margin-top: 60px;
   right: 0;
@@ -110,41 +117,64 @@ header {
 .header-dropdown_menu-content.active {
   display: flex;
 }
-.header-dropdown_menu-content-item {
-  width: 100%;
-}
-.desktop-header-nav-bar 
-.header-nav-bar-item:last-of-type {
-  padding: 10px;
-  flex-grow: 2;
-  margin-left: 20px;
-  max-width: 200px;
-}
-.desktop-header-nav-bar .header-nav-bar-item:last-of-type form {
-  display: flex;
-  width: 100%;
-}
-.mobile-header-nav-bar .header-nav-bar-item:last-of-type button {
-  margin: 10px;
-  width: 90%;
-}
-.header-nav-bar-item a {
-  text-decoration: none;
-  color: inherit;
+.header-dropdown_menu-content-item,
+.header-nav_bar-item {
   padding: 10px 20px;
 }
-.header-nav-bar-item a:active, 
-.header-nav-bar-item a:hover {
+.header-dropdown_menu-content-item a, 
+.header-nav_bar-item a {
+  text-decoration: none;
+  color: inherit;
+  white-space:nowrap;
+}
+.header-dropdown_menu-content-item a:active,
+.header-dropdown_menu-content-item a:hover,
+.header-nav_bar-item a:active, 
+.header-nav_bar-item a:hover {
   filter: brightness(1.05);
   text-decoration: underline;
 }
-
-/* ---- SECTION 1 ---------------------------------------------------------- */
-.join_us_section {
+/* ---- Header "SIGN IN" link ----------------------------------------------- */
+.header-dropdown_menu-content-item.sign_in_item,
+.header-nav_bar-item.sign_in_item {
   display: flex;
-  flex-direction: column;
   justify-content: center;
-  align-items: center;
+  text-transform: uppercase;
+  white-space: nowrap;
+}
+.header-dropdown_menu-content-item.sign_in_item {
+  background-color: #6C757D;
+}
+.header-nav_bar-item.sign_in_item {
+  color: #6C757D;
+}
+.header-dropdown_menu-content-item.sign_in_item a {
+  margin: 0;
+  padding: 0;
+}
+/* ---- Header "Join Us" button --------------------------------------------- */
+.header-dropdown_menu-content-item.join_us_item,
+.header-nav_bar-item.join_us-item {
+  flex-grow: 2;
+  max-width: 200px;
+}
+.header-dropdown_menu-content-item.join_us_item {
+  padding: 0;
+}
+.header-dropdown_menu-content-item.join_us_item form,
+.header-nav_bar-item.join_us-item form {
+  display: flex;
+  width: 100%;
+}
+.header-dropdown_menu-content-item.join_us_item button {
+  border-radius: 0;
+  width: 100%;
+}
+
+/* =============================================================================
+   SECTION 1: "JOIN US" 
+   ========================================================================== */
+.join_us_section {
   text-align: center;
   padding: 30px;
   background-color: #343A40;

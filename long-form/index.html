@@ -5,56 +5,101 @@
   <!-- UTF-8 character encoding  -->
   <meta charset="UTF-8">
   <!-- Suspect that Internet Explorer 8 will attempt to render the page in an incorrect view  -->
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta 
+    http-equiv="X-UA-Compatible" 
+    content="IE=edge"
+  >
   <!-- Browser instructions on how to control the page's dimensions and scaling -->
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta 
+    name="viewport" 
+    content="width=device-width, initial-scale=1.0"
+  >
   <!-- Embed Styles -->
-  <link rel="stylesheet" type="text/css" href="./assets/styles.css" />
+  <link 
+    rel="stylesheet" 
+    type="text/css" 
+    href="./assets/styles.css" 
+  >
   <!-- Embed font  families -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Mingzat&display=swap" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css2?family=Krona+One&display=swap" rel="stylesheet">
+  <link 
+    rel="preconnect" 
+    href="https://fonts.googleapis.com"
+  >
+  <link 
+    rel="preconnect" 
+    href="https://fonts.gstatic.com" 
+    crossorigin
+  >
+  <link 
+    href="https://fonts.googleapis.com/css2?family=Mingzat&display=swap" 
+    rel="stylesheet"
+  >
+  <link 
+    href="https://fonts.googleapis.com/css2?family=Krona+One&display=swap" 
+    rel="stylesheet"
+  >
   <!-- Title for the browser title bar -->
-  <link rel="icon" type="image/x-icon" href="./assets/svg/helmet-red.svg">
+  <link 
+    rel="icon" type="image/x-icon" 
+    href="./assets/svg/helmet-red.svg"
+  >
   <title>DEV Warriors</title>
 </head>
 <!-- Header with navigation bar -->
 <header>
   <div class="header-logo">
     <a href#>
-      <img src="./assets/svg/logo-red.svg" alt="logo image">
+      <img 
+        src="./assets/svg/logo-red.svg" 
+        alt="logo image"
+      >
     </a>
   </div>
-  <!-- navigation for mobile -->
-  <div class="header-nav-bar mobile-header-nav-bar">
+  <!-- dropdown menu for mobile and tablet devices -->
+  <div class="header-dropdown_menu">
     <button class="header-dropdown_menu-button">
-      <img src="./assets/svg/menu-gray.svg" alt="menu icon">
+      <img 
+        src="./assets/svg/menu-gray.svg" 
+        alt="menu icon"
+      >
     </button>
     <ul class="header-dropdown_menu-content">
-      <li class="header-nav-bar-item header-dropdown_menu-content-item">
+      <li class="header-dropdown_menu-content-item">
         <a href="#">
           News
         </a>
       </li>
-      <li class="header-nav-bar-item header-dropdown_menu-content-item">
+      <li class="header-dropdown_menu-content-item">
         <a href="#">
           Podcasts
         </a>
       </li>
-      <li class="header-nav-bar-item header-dropdown_menu-content-item">
+      <li class="header-dropdown_menu-content-item">
         <a href="#">
           Courses & Careers
         </a>
       </li>
-      <li class="header-nav-bar-item header-dropdown_menu-content-item">
+      <li class="header-dropdown_menu-content-item">
         <a href="#">
           About
         </a>
       </li>
-      <li class="header-nav-bar-item header-dropdown_menu-content-item">
-        <form id="joinUsNavMenuForm" class="content-info-sign-up-form">
-          <button class="generic-button join_us_section-form-submit_button" type="submit" form="joinUsNavMenuForm" value="submit">
+      <li class="header-dropdown_menu-content-item sign_in_item">
+        <a href="#">
+          Sign In
+        </a>
+      </li>
+      <li class="header-dropdown_menu-content-item join_us_item">
+        <form 
+          id="dropdownJoinUsForm" 
+          class="join_us_item-form"
+        >
+          <button 
+            class="generic_button join_us_item-form-submit_button" 
+            type="submit" 
+            form="dropdownJoinUsForm" 
+            value="submit"
+          >
             Join Us
           </button>
         </form>
@@ -62,31 +107,44 @@
     </ul>
   </div>
 
-  <!-- navigation for greater devices -->
-  <ul class="header-nav-bar desktop-header-nav-bar ">
-    <li class="header-nav-bar-item">
+  <!-- navigation bar for flipped tablets and desktop deices -->
+  <ul class="header-nav_bar">
+    <li class="header-nav_bar-item">
       <a href="#">
         News
       </a>
     </li>
-    <li class="header-nav-bar-item">
+    <li class="header-nav_bar-item">
       <a href="#">
         Podcasts
       </a>
     </li>
-    <li class="header-nav-bar-item">
+    <li class="header-nav_bar-item">
       <a href="#">
         Courses & Careers
       </a>
     </li>
-    <li class="header-nav-bar-item">
+    <li class="header-nav_bar-item">
       <a href="#">
         About
       </a>
     </li>
-    <li class="header-nav-bar-item">
-      <form id="joinUsNavBarForm" class="content-info-sign-up-form">
-        <button class="generic-button join_us_section-form-submit_button" type="submit" form="joinUsNavBarForm" value="submit">
+    <li class="header-nav_bar-item sign_in_item">
+      <a href="#">
+        Sign In
+      </a>
+    </li>
+    <li class="header-nav_bar-item join_us_item ">
+      <form 
+        id="navBarJoinUsForm" 
+        class="join_us_item-form"
+      >
+        <button 
+          class="generic_button join_us_section-form-submit_button"
+          type="submit"
+          form="navBarJoinUsForm"
+          value="submit"
+        >
           Join Us
         </button>
       </form>
@@ -95,8 +153,13 @@
 </header>
 <!-- Body with all content divided in sections -->
 <body>
-  <div class="section join_us_section">
-    <img class="join_us_section-swords" src="./assets/svg/swords.svg" alt="swords image">
+  <!-- Section 1: Join Us-->
+  <div class="section join_us_section flex-column">
+    <img 
+      class="join_us_section-swords" 
+      src="./assets/svg/swords.svg" 
+      alt="swords image"
+    >
     <div class="join_us_section-center_content flex-column">
       <h1 class="join_us_section-center_content-tittle">
         Become a DEV Warrior
@@ -116,13 +179,25 @@
         <a href="#">podcasts</a>
         .
       </p>
-      <form id="joinUsSectionForm" class="join_us_section-center_content-sign-up-form">
-        <button class="generic-button join_us_section-form-submit_button" type="submit" form="joinUsSectionForm" value="submit">
+      <form 
+        id="joinUsSectionForm" 
+        class="join_us_section-center_content-join_us-form"
+      >
+        <button 
+          class="generic_button join_us_section-form-submit_button" 
+          type="submit" 
+          form="joinUsSectionForm" 
+          value="submit"
+        >
           Join Us
         </button>
       </form>
     </div>
     <img class="join_us_section-cheers" src="./assets/svg/cheers.svg" alt="cheers image">
+  </div>
+  <!-- Section 2: Courses resume -->
+  <div class="site_resume_section">
+    
   </div>
 </body>
 <!-- Complete footer -->
