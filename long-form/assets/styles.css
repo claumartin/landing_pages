@@ -28,6 +28,10 @@
   justify-content: center;
   align-items: center;
 }
+.title {
+  font-family: 'Krona One', sans-serif;
+  margin: 0;
+}
 /* ---- Body ---------------------------------------------------------------- */
 body {
   margin: 0;
@@ -101,7 +105,7 @@ header {
 .header-dropdown_menu-button img {
   width: inherit;
 }
-/* ---- Dropdoen menu content and navigation items -------------------------- */
+/* ---- Dropdown menu content and navigation items -------------------------- */
 .header-dropdown_menu-content {
   display: none;
   position: absolute;
@@ -194,9 +198,7 @@ header {
 .join_us_section-center_content {
   margin: 20px;
 }
-.join_us_section-center_content-tittle {
-  font-family: 'Krona One', sans-serif;
-  margin: 0;
+.join_us_section-center_content-title {
   color: #E9ECEF;
 }
 .join_us_section-center_content-subtitle {
@@ -216,4 +218,123 @@ header {
 .join_us_section-center_content a:active,
 .join_us_section-center_content a:hover {
   text-decoration: underline;
+}
+
+/* =============================================================================
+   SECTION 2: "COURSES AND TUTORIALS RESUME" 
+   ========================================================================== */
+.courses_section {
+  padding: 30px;
+  background-color: rgba(255, 247, 230);
+  color: #343A40;
+  font-family: 'Krona One', sans-serif;
+}
+.courses_section-title {
+  text-align: center;
+}
+.courses_section-category {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  width: 100%;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: top;
+}
+.courses_section-category:first-of-type {
+  background-image: url("./img/worn-parchment.png");
+}
+.courses_section-category:last-of-type {
+  background-image: url("./img/parchment.png");
+}
+.courses_section-category-resume-subtitle {
+  margin: 0;
+  text-align: center;
+}
+.courses_section-category-resume-list {
+  list-style: none;
+  padding-inline-start: 0;
+}
+.courses_section-category-resume-list-item {
+  background-image: url(./svg/check.svg);
+  background-repeat: no-repeat;
+  background-position: left center;
+  background-size: contain;
+  height: 40px;
+  padding-left: 45px;
+  margin: 5px 0;    
+  display: flex;
+  align-items: center;
+}
+.courses_section-category-image {
+  width: 315px;
+}
+.courses_section-category-separator {
+  width: 100%;
+  border: none;
+  height: 0.5px;
+  background-color: #dbc8b1;
+  margin: 20px 0;
+}
+.courses_section-category:last-of-type .courses_section-category-separator {
+  display: none;
+}
+/* ---- From medium to greater devices--------------------------------------- */
+@media only screen and (min-width: 481px) {
+  .courses_section-category {
+    background-position: bottom;
+  }
+  .courses_section-category-resume {
+    background: rgba(255, 247, 230, 0.50);
+    border-radius: 20px;
+    padding: 10px;
+  }
+  .courses_section-category:first-of-type .courses_section-category-resume {
+    margin: 10px 0 115px 0;
+  }
+  .courses_section-category:last-of-type .courses_section-category-resume {
+    margin: 10px 0 145px 0;
+  }
+  .courses_section-category-resume-list {
+    padding-inline-start: 25px;
+  }
+}
+/* ---- Greatest devices ---------------------------------------------------- */
+@media only screen and (min-width: 769px) {
+  .courses_section-category {
+    align-items: center;
+    justify-content: space-between;
+    background-size: cover;
+    background-position: top;
+  }
+  .courses_section-category:last-of-type {
+    flex-flow: row-reverse;
+  }
+  .courses_section-category:first-of-type, 
+  .courses_section-category:last-of-type {
+    background: inherit;
+    margin-top: 20px;
+  }
+  .courses_section-category-image {
+    background-image: url(./img/parchment.png);
+    background-size: contain;
+  }
+  .courses_section-category-resume-subtitle {
+    text-align: start;
+  }
+  .courses_section-category-resume {
+    padding: 10px;
+    flex-grow: 2;
+    background: none;
+  }
+  .courses_section-category:first-of-type .courses_section-category-resume {
+    padding: 0 0 0 40px;
+  }
+  .courses_section-category:last-of-type .courses_section-category-resume {
+    padding: 0;
+  }
+  .courses_section-category:first-of-type .courses_section-category-resume,
+  .courses_section-category:last-of-type .courses_section-category-resume {
+    margin: 10px 0;
+  }
 }
