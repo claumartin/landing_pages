@@ -406,21 +406,21 @@ header {
 /* =============================================================================
   SECTION 3: "NEWS" 
   =========================================================================== */
-.news_section {
-  padding: 30px;
-  color: #040101;
-  background-color: #CED4DA;
-}
-.news_section-sources {
-  margin-top: 30px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  border: 5px solid white;
-  border-radius: 20px;
-}
-.news_section-sources-image {
-  margin-bottom: 40px;
+  .news_section {
+    padding: 30px;
+    color: #040101;
+    background-color: #CED4DA;
+  }
+  .news_section-sources {
+    margin-top: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: 5px solid white;
+    border-radius: 20px;
+  }
+  .news_section-sources-image {
+    margin-bottom: 40px;
 }
 .news_section-sources-image.small_image {
   width: 100px;
@@ -440,5 +440,50 @@ header {
   }
   .news_section-sources-image {
     margin: 25px;
+  }
+}
+
+/* =============================================================================
+SECTION 4: "PODCASTS" 
+=========================================================================== */
+.podcasts_section {
+  padding: 30px;
+  font-family: 'Krona One', sans-serif;
+  color: #212529;
+  background-color: #f0f1f2;
+}
+.podcasts_section-content {
+  text-align: center;
+  margin-top: 30px;
+}
+.podcasts_section-content-image {
+  display: flex;
+  justify-content: center;
+}
+.podcasts_section-content-image img {
+  width: 300px;
+}
+.podcasts_section-content-text-detail {
+  color: #fe3434;
+  font-weight: 600;
+}
+/* ---- Greatest devices ---------------------------------------------------- */
+@media only screen and (min-width: 769px) {
+  .podcasts_section-content {
+    display: flex;
+    justify-content: center;
+  }
+  .podcasts_section-content-text {
+    text-align: start;
+    width: 70%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+  }
+  .podcasts_section-content-image {
+    justify-content: end;
+  }
+  .podcasts_section-content-image img {
+    width: 200px;
   }
 }
