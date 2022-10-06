@@ -11,7 +11,6 @@
   font-weight: 600;
   color: #E9ECEF;
   width: 200px;
-  font-family: 'Krona One', sans-serif;
   cursor: pointer;
 }
 .generic_button:active, 
@@ -27,11 +26,16 @@
   align-items: center;
 }
 .title {
-  font-family: 'Krona One', sans-serif;
   margin: 0;
   text-align: center;
+  font-family: 'Krona One', sans-serif;
 }
-/* ---- Body ---------------------------------------------------------------- */
+.section {
+  padding: 30px;
+}
+/* =============================================================================
+   BODY
+   ========================================================================== */
 body {
   margin: 0;
   font-family: 'Mingzat', sans-serif;
@@ -48,7 +52,9 @@ body::-webkit-scrollbar-track {
 body::-webkit-scrollbar-thumb {
   background-color: #6C757D;
 }
-/* ---- Header with navigation ---------------------------------------------- */
+/* =============================================================================
+   HEADER WITH NAVIGATION
+   ========================================================================== */
 header {
   display: flex;
   justify-content: space-between;
@@ -237,7 +243,6 @@ header {
   padding: 30px;
   background-color: rgba(255, 247, 230);
   color: #343A40;
-  font-family: 'Krona One', sans-serif;
 }
 .courses_section-category {
   display: flex;
@@ -378,7 +383,6 @@ header {
   justify-content: center;
   align-items: center;
   text-align: center;
-  font-family: 'Krona One', sans-serif;
   color: #ADB5BD;
   border: 2px solid #9A0101;
   border-radius: 20px;
@@ -429,7 +433,7 @@ header {
   width: 200px;
 }
 .news_section-sources-image.big_image {
-  width: 300px;
+  width: 270px;
 }
 /* ---- Greatest devices ---------------------------------------------------- */
 @media only screen and (min-width: 769px) {
@@ -444,11 +448,10 @@ header {
 }
 
 /* =============================================================================
-SECTION 4: "PODCASTS" 
-=========================================================================== */
-.podcasts_section {
+  SECTION 4: "PODCASTS" 
+  =========================================================================== */
+  .podcasts_section {
   padding: 30px;
-  font-family: 'Krona One', sans-serif;
   color: #212529;
   background-color: #f0f1f2;
 }
@@ -485,5 +488,98 @@ SECTION 4: "PODCASTS"
   }
   .podcasts_section-content-image img {
     width: 200px;
+  }
+}
+
+/* =============================================================================
+  SECTION 5: "NUMBERS" 
+  =========================================================================== */
+.numbers_section {
+  background-color: #040101;
+  text-align: center;
+}
+.numbers_section-content-resume {
+  font-size: 1.5em;
+  font-weight: 800;
+  font-family: 'Krona One', sans-serif;
+}
+.numbers_section-content-resume-numbers {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  margin: 20px 0;
+}
+.numbers_section-content-resume-numbers p {
+  background-color: rgba(255, 247, 230);
+  color: #212529;
+  font-family: 'Krona One', sans-serif;
+  width: 100%;
+  padding: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  margin: 10px;
+}
+.numbers_section-content-resume-reviews-graphics img {
+  width: 40px;
+  margin-right: 7px;
+}
+.numbers_section-content-resume-reviews-graphics img:last-of-type {
+  width: 40px;
+  margin-right: 0;
+}
+.numbers_section-content-resume-reviews-strars {
+  color: #fe3434;
+  display: flex;
+  justify-content: center;
+}
+.numbers_section-content-resume-reviews-details {
+  color: #9A0101;
+  font-size: 1.5em;
+  font-weight: 800;
+  font-family: 'Krona One', sans-serif;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+}
+.numbers_section-content-images {
+  width: 300px;
+  display: flex;
+  flex-direction: column;
+}
+.numbers_section-content-image-stars {
+  width: 75px;
+  align-self: end;
+}
+.numbers_section-content-image-flag {
+  width: inherit;
+  margin-top: -22px;
+}
+/* ---- From medium to greater devices--------------------------------------- */
+@media only screen and (min-width: 481px) {
+  .numbers_section-content {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: end;
+  }
+  .numbers_section-content-resume {
+    flex-grow: 2;
+  }
+  .numbers_section-content-resume-numbers p {
+    max-width: 500px;
+  }
+  .numbers_section-content-images {
+    margin-left: 20px;
+  }
+}
+/* ---- Greatest devices ---------------------------------------------------- */
+@media only screen and (min-width: 769px) {
+  .numbers_section-content-resume {
+    flex-grow: unset;
+  }
+  .numbers_section-content-resume-numbers p {
+    width: 500px;
   }
 }
