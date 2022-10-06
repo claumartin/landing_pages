@@ -1,7 +1,6 @@
 /* =============================================================================
    GENERIC STYLES 
    ========================================================================== */
-/* ---- Generic button ------------------------------------------------------ */
 .generic_button {
   background-color: #9A0101;
   border-radius: 30px;
@@ -21,7 +20,6 @@
   filter: brightness(1.05);
   text-decoration: underline;
 }
-/* ---- Classes to group repeated properties -------------------------------- */
 .flex-column {
   display: flex;
   flex-direction: column;
@@ -31,6 +29,7 @@
 .title {
   font-family: 'Krona One', sans-serif;
   margin: 0;
+  text-align: center;
 }
 /* ---- Body ---------------------------------------------------------------- */
 body {
@@ -240,9 +239,6 @@ header {
   color: #343A40;
   font-family: 'Krona One', sans-serif;
 }
-.courses_section-title {
-  text-align: center;
-}
 .courses_section-category {
   display: flex;
   flex-wrap: wrap;
@@ -326,7 +322,11 @@ header {
     background: inherit;
     margin-top: 20px;
   }
-  .courses_section-category-image {
+  .courses_section-category:first-of-type .courses_section-category-image {
+    background-image: url(./img/worn-parchment.png);
+    background-size: contain;
+  }
+  .courses_section-category:last-of-type .courses_section-category-image {
     background-image: url(./img/parchment.png);
     background-size: contain;
   }
@@ -351,14 +351,11 @@ header {
 }
 
 /* =============================================================================
-SECTION 2: "CAREERS" 
-========================================================================== */
+  SECTION 2: "CAREERS" 
+  =========================================================================== */
 .careers_section {
   background-color: #212529;
   padding: 30px;
-}
-.careers_section-title {
-  text-align: center;
 }
 .careers_section-resume {
   margin-bottom: 0;
@@ -394,7 +391,7 @@ SECTION 2: "CAREERS"
   width: 100%;
   border: none;
   height: 0.5px;
-  background-color: #ADB5BD;
+  background-color: #495057;
   margin: 20px 0;
 }
 /* ---- From medium to greater devices--------------------------------------- */
@@ -403,5 +400,45 @@ SECTION 2: "CAREERS"
     grid-template-columns: repeat(3, 30%[col-start]);
     grid-template-rows: repeat(2, 120px [row-start]);
     justify-content: center;
+  }
+}
+
+/* =============================================================================
+  SECTION 3: "NEWS" 
+  =========================================================================== */
+.news_section {
+  padding: 30px;
+  color: #040101;
+  background-color: #CED4DA;
+}
+.news_section-sources {
+  margin-top: 30px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border: 5px solid white;
+  border-radius: 20px;
+}
+.news_section-sources-image {
+  margin-bottom: 40px;
+}
+.news_section-sources-image.small_image {
+  width: 100px;
+}
+.news_section-sources-image.medium_image {
+  width: 200px;
+}
+.news_section-sources-image.big_image {
+  width: 300px;
+}
+/* ---- Greatest devices ---------------------------------------------------- */
+@media only screen and (min-width: 769px) {
+  .news_section-sources {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  .news_section-sources-image {
+    margin: 25px;
   }
 }
